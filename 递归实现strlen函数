@@ -1,0 +1,21 @@
+//递归实现strlen函数
+#include <stdio.h>
+//把大事化小
+//my_strlen("bit")
+//1+my_strlen("it")
+//1+1+my_strlen("t")
+//1+1+1 
+int my_strlen(char *str)
+{
+	if(*str!='\0')
+		return 1+my_strlen(str+1);
+	else
+		return 0;
+}
+int main()
+{
+	char arr[] = "kaoyanjiayou";
+	int ret = my_strlen(arr);
+	printf("%d\n",ret);
+	return 0;
+} 
