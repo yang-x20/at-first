@@ -1,0 +1,21 @@
+//输入多位数，打印每位上的数字
+#include <stdio.h>
+//test(1234)
+//test(123) 4
+//test(12) 3 4
+//test(1) 2 3 4
+//1 2 3 4
+void test(int n)
+{
+	if(n>9)
+		test(n/10);
+	printf("%d ",n%10);
+}
+int main()
+{
+	unsigned int num = 0;
+	printf("请输入一个多位数：");
+	scanf("%d",&num);
+	test(num);
+	return 0;
+} 
